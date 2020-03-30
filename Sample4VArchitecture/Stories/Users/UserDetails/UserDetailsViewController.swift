@@ -32,6 +32,7 @@ final class UserDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userView?.setupView(with: viewModel.getUserDetailsViewData())
         userView?.closeButtonClosure = { [weak self] in
             guard let self = self else { return }
             self.viewModel.closeButtonDidTap()

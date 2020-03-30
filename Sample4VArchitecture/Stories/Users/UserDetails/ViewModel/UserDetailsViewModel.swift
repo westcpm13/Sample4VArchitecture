@@ -23,4 +23,8 @@ final class UserDetailsViewModel {
     func closeButtonDidTap() {
         navigationDelegate?.userDetailsCloseDidTap()
     }
+    
+    func getUserDetailsViewData() -> UserDetailsViewData {
+        return UserDetailsViewData(userName: userModel.name)
+    }
 }
